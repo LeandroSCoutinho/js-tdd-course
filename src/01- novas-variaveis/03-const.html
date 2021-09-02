@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>03 - const</title>
+</head>
+<body>
+  <script>
+      const secretNumber = 23;
+
+      const person = {
+        name: 'Leandro',
+        age: 33
+      }
+
+      Object.freeze(person);
+
+      person.age = 55;
+      console.log(person);
+  </script>
+
+</body>
+</html>
