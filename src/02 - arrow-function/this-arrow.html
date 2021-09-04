@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>02- This no arrow function</title>
+</head>
+<body>
+
+  <button  id="btn">Make my sandwich</button>
+
+  <script>
+      const sandwich = {
+        bread: 'white',
+        cheese: 'cheddar',
+
+        prepare: function(){
+          return `I want a sandwich with ${this.bread} bread and ${this.cheese} cheese!`;
+        },
+
+        make: function(){
+          window.setTimeout(() => {
+              console.log(this.prepare());
+          },500);
+        }
+      };
+
+      const btn = document.querySelector('#btn');
+
+      btn.addEventListener('click', function(){sandwich.make()});
+  </script>
+
+</body>
+</html>
