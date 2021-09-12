@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02 Array.find() and findIdex()</title>
+</head>
+<body>
+</body>
+
+<script>
+    const person = [
+      {
+        name:"Leandro",
+        age: 33
+      },
+      {
+        name:"Cibelly",
+        age: 11
+      }
+    ];
+/*
+    const arrayTest = ["Projota","BBB",21];
+    const arrayFind = arrayTest.find(item => item === 21);
+    const arrayFindIdex = arrayTest.findIndex(item => item === "BBB");
+*/
+
+    const personFind = person.find(person => person.name === "Cibelly");
+    console.log(personFind);
+
+    const personFindIndex = person.findIndex(person => person.name === "Leandro");
+    console.log(personFindIndex);
+</script>
+</html>
