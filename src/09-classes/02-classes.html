@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02 - Classes </title>
+</head>
+<body>
+</body>
+<script>
+
+    class Animal {
+
+      constructor(kind, sound,name){
+        this.kind = kind;
+        this.sound = sound;
+      }
+
+      hello(){
+        console.log(`${this.sound} I am a ${this.kind}`)
+      }
+
+      static info(){
+        console.log('This is a class to creator animals!');
+      }
+
+
+      set nickName(nick){
+        this.nick = nick;
+      }
+
+      get name(){
+        console.log(`My name is Bread`);
+      }
+    }
+
+
+    const dog = new Animal('Dog','au-au');
+    const cat = new Animal('Cat','Meow');
+
+    dog.hello();
+
+    Animal.info();
+
+    dog.nickName = 'Nick';
+    dog.name;
+</script>
+</html>
