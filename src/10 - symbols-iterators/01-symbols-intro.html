@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01 - Symbol intro</title>
+</head>
+<body>
+</body>
+
+<script>
+    let lion = Symbol('name');
+    let tiger = Symbol('name');
+
+//console.log(lion === tiger);
+
+const person = {
+  [Symbol('name')]: 'Leandro',
+  [Symbol('age')]: 33,
+  city: 'Itaitinga'
+}
+
+//console.log(Object.keys(person))
+const symbols = Object.getOwnPropertySymbols(person);
+const data = symbols.map(properties => person[properties]);
+
+console.log(data);
+</script>
+</html>
