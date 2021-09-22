@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01 - Sets intro</title>
+</head>
+<body>
+</body>
+
+<script>
+   let mySet = new Set(['Leandro','Cibelly','Fabrícia']);
+
+   mySet.add('Willian');
+   mySet.add('Willian');
+   mySet.add('Willian');
+   mySet.add('Neide');
+
+   mySet.delete('Leandro');
+
+   console.log(mySet.has('Leandro'));
+   console.log(mySet.has('Cibelly'));
+
+   console.log(mySet)
+
+   let it = mySet.values();
+
+   console.log(it.next());
+
+   for(name of it){
+      console.log(name);
+   }
+</script>
+</html>
