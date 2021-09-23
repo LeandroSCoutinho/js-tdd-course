@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02 - Weakmap intro</title>
+</head>
+<body>
+</body>
+<script>
+    let obj1 = {
+      name:'Leandro',
+      age: 33
+    }
+
+    let obj2 = {
+      name: 'Cibelly',
+      age: 11
+    }
+
+    let objWeakmap = new WeakMap();
+
+    objWeakmap.set(obj1, 'Info Leandro');
+    objWeakmap.set(obj2, 'Info Cibelly');
+
+    console.log(objWeakmap);
+</script>
+</html>
