@@ -12,12 +12,13 @@
 
 <script>
 
-    function rickAndMortyAPI(){
-        return fetch('https://rickandmortyapi.com/api/character')
-                  .then( response => response.json())
-                  .then(personal => personal.results.map( data =>{
-                      console.log(data.name);
-                  }));
+    async function rickAndMortyAPI(){
+        const api = await fetch('https://rickandmortyapi.com/api/character')
+        const response =  await api.json();
+
+        return response.results.map( personal => {
+          console.log(personal.name)
+        });
     }
 
     rickAndMortyAPI();
